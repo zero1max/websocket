@@ -42,12 +42,6 @@ source venv/bin/activate
 ```sh
 pip install -r requirements.txt
 ```
-
-Agar siz **Windows** foydalanuvchisi bo‘lsangiz, **uvloop** muammosi bo‘lishi mumkin. Uni o‘rnatish shart emas, shuning uchun quyidagi buyruq bilan davom eting:
-```sh
-pip install -r requirements.txt --no-deps uvloop
-```
-
 ---
 
 ## 🚀 Serverni ishga tushirish
@@ -95,25 +89,6 @@ Loyihada **WebSocket** ishlatilgan bo‘lib, foydalanuvchilar real vaqt rejimida
 
 ---
 
-## 🛠 Muammo va yechimlar
-### 1. `uvloop` Windows'da o‘rnatilmayapti
-**Yechim:** `requirements.txt` dan `uvloop` ni olib tashlang yoki quyidagi buyruqni ishlating:
-```sh
-pip install -r requirements.txt --no-deps uvloop
-```
-
-### 2. `port 8000 is already in use`
-**Yechim:** Avvalgi ishlayotgan serverni topish va o‘chirish kerak:
-```sh
-# Windows
-netstat -ano | findstr :8000
-# So‘ng process ID (PID) bo‘yicha o‘chirish
-Taskkill /PID <PID> /F
-
-# Linux/MacOS
-lsof -i :8000
-kill -9 <PID>
-```
 
 ---
 
@@ -121,8 +96,4 @@ kill -9 <PID>
 Bu loyiha **MIT** litsenziyasi asosida tarqatiladi.
 
 ---
-
-✅ **Muallif:** [Your Name]  
-✅ **GitHub:** [Your GitHub Link]  
-✅ **Loyiha Statusi:** Ishlaydi 🚀
 
